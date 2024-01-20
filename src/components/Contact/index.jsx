@@ -15,9 +15,15 @@ export default function index() {
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
     return (
-        <motion.div style={{y}} ref={container} className={styles.contact}>
-            <div className={styles.body}>
+        <motion.div style={{ y }} ref={container} className={styles.footer}>
+            <Image
+                src="/images/footerBackground.jpg"
+                fill={true}
+                alt="background"
+            />
+            {/* <div className={styles.body}>
                 <div className={styles.title}>
+                
                     <span>
                         <div className={styles.imageContainer}>
                             <Image 
@@ -75,7 +81,9 @@ export default function index() {
                         </Magnetic>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </motion.div>
     )
 }
+
+

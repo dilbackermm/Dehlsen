@@ -128,3 +128,16 @@
     }
     
 }
+
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    width: 100vw;
+    overflow: hidden;
+
+    img{
+      object-fit: cover;
+    }
+}

@@ -65,7 +65,35 @@
             flex-direction: column;
             position: relative;
             z-index: 1;
-            padding: 15px;
+            padding: 20px;
+            cursor: pointer;
+            &:hover{
+                .indicator{
+                    transform: scale(1);
+                }
+            }
+            .indicator{
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                top: 45px;
+                left: 50%;
+                background-color: white;
+                border-radius: 50%;
+                transform: scale(0) translateX(-50%);
+                transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+        }
+        .hl{
+            display: flex;
+            font-weight: 500;
+            flex-direction: column;
+            position: relative;
+            border-radius: 12px;
+            z-index: 1;
+            color: #C7FCAE;
+            // background-color: #C7FCAE;
+            padding: 10px 20px 10px 20px;
             cursor: pointer;
             &:hover{
                 .indicator{
@@ -101,7 +129,7 @@
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background-color: #1C1D20;
+        background-color: #212768;
         cursor: pointer;
         display: flex;
         align-items: center;

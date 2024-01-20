@@ -1,14 +1,19 @@
 .roundedButton{
     border-radius: 3em;
+    width: 160px;
     border: 1px solid rgb(136, 136, 136);
+    background-color: #C7FCAE;
     cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 60px 15px 60px;
+    padding: 8px;
 
     p{
+        color: #162E4F;
+        font-weight: 600;
+        font-size: 1rem;
         position: relative;
         z-index: 1;
         transition: color 0.4s linear;

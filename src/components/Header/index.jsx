@@ -36,17 +36,17 @@ export default function index() {
         <>
         <div ref={header} className={styles.header}>
             <div className={styles.logo}>
-                <p className={styles.copyright}>©</p>
+                {/* <p className={styles.copyright}>©</p>
                 <div className={styles.name}>
                     <p className={styles.codeBy}>Code by</p>
                     <p className={styles.dennis}>Dennis</p>
                     <p className={styles.snellenberg}>Snellenberg</p>
-                </div>
+                </div> */}
             </div>
             <div className={styles.nav}>
                 <Magnetic>
-                    <div className={styles.el}>
-                        <a>Work</a>
+                    <div className={styles.hl}>
+                        <a>Home</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
@@ -58,7 +58,19 @@ export default function index() {
                 </Magnetic>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Contact</a>
+                        <a>Services</a>
+                        <div className={styles.indicator}></div>
+                    </div>
+                </Magnetic>
+                <Magnetic>
+                    <div className={styles.el}>
+                        <a>Projects</a>
+                        <div className={styles.indicator}></div>
+                    </div>
+                </Magnetic>
+                <Magnetic>
+                    <div className={styles.el}>
+                        <a>Contatct</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
