@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import styles from './style.module.scss'
+import styles from './style.module.css'
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -8,6 +8,7 @@ import { slideUp } from './animation';
 import { motion } from 'framer-motion';
 import Rounded from '../../common/RoundedButton';
 import { Canvas } from '@react-three/fiber';
+import SolarModel from './SolarModel'
 
 
 export default function Home() {
@@ -49,6 +50,7 @@ export default function Home() {
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <Image
+        className='limg'
         src="/images/landingBackground.jpg"
         fill={true}
         alt="background"
@@ -66,30 +68,33 @@ export default function Home() {
         <p>Freelance</p>
         <p>Designer & Developer</p>
       </div> */}
-      <div className={styles.leftContainer}>
-        <div className={styles.textContainer}>
-          <h1>
-            Embrace the
-            Solar Revelution
-          </h1>
-          <h5>
-            Go solar with dehlson energy
-          </h5>
+      <div className={styles.container}>
+        <div className={styles.leftContainer}>
+          <div className={styles.textContainer}>
+            <h1>
+              Embrace the
+              Solar Revelution
+            </h1>
+            <h5>
+              Go solar with dehlson energy
+            </h5>
+          </div>
+          <div className={styles.button}>
+            <Rounded>
+              <p>Explore More</p>
+            </Rounded>
+          </div>
         </div>
-        <div className={styles.button}>
-          <Rounded>
-            <p>Explore More</p>
-          </Rounded>
+{/* <SolarModel />     */}
+    <div className={styles.rightContainer}>
+          <Image
+            //  className="simg"
+            src="/images/sola.svg"
+            fill={true}
+            alt="background"
+          />
         </div>
       </div>
-      <div>
-        <Canvas>
-
-        </Canvas>
-      </div>
-
-
-
     </motion.main>
   )
 }

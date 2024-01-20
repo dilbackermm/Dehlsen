@@ -6,38 +6,46 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#e3e5e7",
-        src: "c2.jpg"
+        src: "l1.png"
     },
     {
         color: "#d6d7dc",
-        src: "decimal.jpg"
+        src: "l2.png"
     },
     {
         color: "#e3e3e3",
-        src: "funny.jpg"
+        src: "l3.png"
     },
     {
         color: "#21242b",
-        src: "google.jpg"
+        src: "l4.png"
+    },
+    {
+        color: "#21242b",
+        src: "l5.png"
     }
 ]
 
 const slider2 = [
     {
-        color: "#d4e3ec",
-        src: "maven.jpg"
+        color: "#e3e5e7",
+        src: "l6.png"
     },
     {
-        color: "#e5e0e1",
-        src: "panda.jpg"
+        color: "#d6d7dc",
+        src: "l7.png"
     },
     {
-        color: "#d7d4cf",
-        src: "powell.jpg"
+        color: "#e3e3e3",
+        src: "l8.jpg"
     },
     {
-        color: "#e1dad6",
-        src: "wix.jpg"
+        color: "#21242b",
+        src: "l9.svg"
+    },
+    {
+        color: "#21242b",
+        src: "l10.svg"
     }
 ]
 
@@ -55,10 +63,13 @@ export default function index() {
 
     return (
         <div ref={container} className={styles.slidingImages}>
+            <div>
+
+            </div>
             <motion.div style={{x: x1}} className={styles.slider}>
                     {
                         slider1.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
+                            return <div key={index} className={styles.project} >
                                 <div className={styles.imageContainer}>
                                     <Image 
                                     fill={true}
@@ -72,7 +83,7 @@ export default function index() {
                 <motion.div style={{x: x2}} className={styles.slider}>
                     {
                         slider2.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
+                            return <div key={index} className={styles.project} >
                                 <div key={index} className={styles.imageContainer}>
                                     <Image 
                                     fill={true}
